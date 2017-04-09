@@ -1,0 +1,7 @@
+final ImageView barcodeImageView = (ImageView)findViewById(R.id.imageview_barcode);
+ImageView myImageView = (ImageView) findViewById(R.id.imageview_barcode);
+final TextView txtView = (TextView) findViewById(R.id.textview_barcoderesult);
+final Bitmap myBitmap = BitmapFactory.decodeResource(
+        getApplicationContext().getResources(),
+        R.drawable.barcode_test);
+myImageView.setImageBitmap(myBitmap);

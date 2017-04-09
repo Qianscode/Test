@@ -1,0 +1,16 @@
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.main,menu);
+    return true;
+}
+
+@Override
+public boolean onOptionsItemSelected(MenuItem item) {
+    if(item.getItemId()==R.id.add_item){
+        Toast.makeText(MainActivity.this,"Add success",Toast.LENGTH_LONG).show();
+    }else if(item.getItemId()==R.id.remove_item){
+        ((TextView)findViewById(R.id.textview_barcoderesult)).setText("NULL");
+        Toast.makeText(MainActivity.this,"Remove success",Toast.LENGTH_LONG).show();
+    }
+    return true;
+}

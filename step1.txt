@@ -1,0 +1,22 @@
+final Button button = (Button) findViewById(R.id.button_order);
+final Button buttonToast = (Button)findViewById(R.id.button_toast);
+
+button.setOnClickListener(new View.OnClickListener(){
+
+     @Override
+     public void onClick(View v){
+         TextView numberOfOrders = (TextView) findViewById(R.id.textView_numberOfOrder);
+         numberOfOrders.setText(""+(++countA));
+//这个地方是用来写当检测到点击事件的时候会执行的语句。
+     }
+ });
+
+buttonToast.setOnLongClickListener(new View.OnLongClickListener(){
+    @Override
+    public boolean onLongClick(View v) {
+        Toast.makeText(MainActivity.this,"这是一个长按事件！",Toast.LENGTH_LONG).show();
+//这个地方是用来写当检测到长点击事件的时候会执行的语句。在这个方法中你可以写任意合法的语句，
+//但是其他的地方是固定的，好了再回到刚才你阅读的地方。
+        return false;
+    }
+});
